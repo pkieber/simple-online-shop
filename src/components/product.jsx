@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
 
+/**
+ * Represents a product component.
+ */
 class Product extends Component {
-    state = {  } 
+    state = {}
+    
+    
+    /**
+     * Render method of the Product component.
+     * Renders the product UI.
+     * @returns {JSX.Element} JSX representing the component's UI.
+     */
     render() { 
         return <div className="card" styles={{width: '18rem'}}>
             <img src={"/assets/img/" + this.props.image} className="card-img-top" alt=""/>
             <div className="card-body">
                 <h5 className="card-title">{this.props.title}</h5>
                 <p className="card-text">{this.props.description}</p>
-                <a href="/" className="btn btn-primary">Add to basket</a>
+                <button onClick={this.props.onAdd} className="btn btn-primary">Add to basket</button>
             </div>
         </div>;
     }

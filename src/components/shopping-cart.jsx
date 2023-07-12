@@ -1,39 +1,48 @@
 import React, { Component } from 'react';
 
+/**
+ * Represents a shopping cart component.
+ */
 class ShoppingCart extends Component {
     state = { 
+        /**
+         * The items in the shopping cart.
+         * @type {Array<{ amount: number, name: string, price: number }>}
+         */
         items: [
             {
-                id: 'p001', // unique key, i.e. product number, etc.
                 amount: 1,
                 name: 'Tomatoes',
-                price: 4.9,
+                price: 2.99,
             },
             {
-                id: 'p002',
                 amount: 1,
                 name: 'Potatoes',
-                price: 4.9,
+                price: 3.99,
             },{
-                id: 'p003',
                 amount: 1,
                 name: 'Peppers',
-                price: 4.9,
+                price: 4.99,
             },
             {
-                id: 'p004',
                 amount: 1,
                 name: 'Broccoli',
-                price: 4.9,
+                price: 5.99,
             }
         ]
     } 
     
+
+    /**
+     * Render method of the ShoppingCart component.
+     * Renders the shopping cart UI.
+     * @returns {JSX.Element} JSX representing the component's UI.
+     */
     render() { 
         return <div className='shopping-cart'>
             <h2>Shopping Cart</h2>
-            { this.state.items.map(item => 
-                <div key={ item.id }>
+            { this.props.items.map(item => 
+                <div key={ item.name }>
                     { item.amount } x { item.name } { item.price }$
                 </div>
                 ) 
