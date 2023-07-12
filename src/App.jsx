@@ -48,10 +48,10 @@ class App extends Component {
             <Navbar/>
             <div className='main-container'>
                 <div className='product-container'>
-                    <Product onAdd={() => this.addItem(1, 'Tomatoes', 2.99)} image="tomatoe.jpg" title="Tomatoes" description="Add tomatoes to your shopping cart."/>
-                    <Product onAdd={() => this.addItem(1, 'Potatoes', 3.99)} image="potatoes.jpg" title="Potatoes" description="Add potatoes to your shopping cart."/>
-                    <Product onAdd={() => this.addItem(1, 'Peppers', 4.99)} image="peppers.jpg" title="Peppers" description="Add peppers to your shopping cart."/>
-                    <Product onAdd={() => this.addItem(1, 'Broccoli', 5.99)} image="broccoli.jpg" title="Broccoli" description="Add broccoli to your shopping cart."/>
+                    <Product onAdd={() => this.addItem(1, 'Tomatoes', 2.99)} image="tomatoe.jpg" title="Tomatoes" description="Buy 500g fresh, hand-picked tomatoes from local farmers."/>
+                    <Product onAdd={() => this.addItem(1, 'Potatoes', 3.99)} image="potatoes.jpg" title="Potatoes" description="Buy 1kg medium-sized potatoes from local farmers."/>
+                    <Product onAdd={() => this.addItem(1, 'Peppers', 4.99)} image="peppers.jpg" title="Peppers" description="Buy 500g red and yellow peppers from local farmers."/>
+                    <Product onAdd={() => this.addItem(1, 'Broccoli', 5.99)} image="broccoli.jpg" title="Broccoli" description="Buy 500g fresh, green broccoli from local farmers."/>
                 </div>
                 <ShoppingCart items={this.state.items}/>
             </div>
