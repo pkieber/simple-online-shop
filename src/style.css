@@ -11,6 +11,7 @@
 
 .shopping-cart {
     width: 25vw;
+    min-width: 200px;
 }
 
 .nav-bar-container {

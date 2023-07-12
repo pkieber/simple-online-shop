@@ -40,7 +40,7 @@ class ShoppingCart extends Component {
      */
     render() { 
         return <div className='shopping-cart'>
-            <h2>Shopping Cart</h2>
+            <h2>Your Order</h2>
             { this.props.items.map(item => 
                 <div key={ item.name }>
                     { item.amount } x { item.name } { item.price }$
