@@ -28,11 +28,11 @@ class ShoppingCart extends Component {
                 amount: 1,
                 name: 'Broccoli',
                 price: 5.99,
-            }
+            },
         ]
-    } 
-    
+    };
 
+    
     /**
      * Render method of the ShoppingCart component.
      * Renders the shopping cart UI.
@@ -43,10 +43,15 @@ class ShoppingCart extends Component {
             <h2>Your Order</h2>
             { this.props.items.map(item => 
                 <div key={ item.name }>
-                    { item.amount } x { item.name } { item.price }$
+                    {item.amount} x {item.name} (${item.price}) = 
+                        ${(item.amount * item.price).toFixed(2)}
                 </div>
                 ) 
             }
+            <hr />
+            <div>
+                Total Sum:
+            </div>
         </div>;
     }
 }
