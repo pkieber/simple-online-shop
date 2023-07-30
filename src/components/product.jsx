@@ -10,6 +10,7 @@ class Product extends Component {
     /**
      * Render method of the Product component.
      * Renders the product UI.
+     * "props" (short for properties) is a mechanism for passing data from a parent component to a child component.
      * @returns {JSX.Element} JSX representing the component's UI.
      */
     render() { 

@@ -29,3 +29,13 @@
         flex-direction: column;
     }
 }
+
+.icons-container {
+    display: fleX;
+    gap: 5px;
+}
+
+.icons {
+    color: var(--bs-primary);
+    cursor: pointer;
+}
